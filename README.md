@@ -9,10 +9,16 @@ First prepare a thumbnail-sized image, then apply blur, and set it to the image 
 Next, retrieve the full size image from the network and replace the thumbnail. Dissolve animation is then applied.
 (The demo version does not have a network feature.)
 
+If you are using the Simulator.app, it may not be rendered properly, so please run it on a device.
+
 ## DissolvingImageView.swift
 
-This is a subclass of UIImageView. It has two main methods.
+This is a extension of UIImageView. It has two main methods.
 
-`setPreloadImage(_ baseImage: UIImage)`
+`setPreloadImage(_ image: UIImage, targetSize: CGSize?)`
 
 `setImageDissolving(_ image: UIImage, duration: TimeInterval)`
+
+# Licese
+
+See [LICENSE](./LICENSE) for details.

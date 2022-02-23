@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 	
-	@IBOutlet var imageView: DissolvingImageView!
+	@IBOutlet var imageView: UIImageView!
 	@IBOutlet var reloadButton: UIButton!
 	
 	private weak var loadingTimer: Timer?
@@ -78,7 +78,7 @@ class ViewController: UIViewController {
 	/// プリロードイメージを設定
 	private func setPreloadImage(_ index: Int) {
 		if let thumbnail = UIImage(named: "thumbnail\(index)") {
-			self.imageView.setPreloadImage(thumbnail)
+			self.imageView.setPreloadImage(thumbnail, targetSize: self.imageView.frame.size)
 		}
 	}
 	
